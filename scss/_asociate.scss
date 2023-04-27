@@ -1,0 +1,172 @@
+.main-background{
+    background-color: #395b64;
+        .header-logo {
+            margin: 50px;
+            font-size: clamp(1rem , 4vw, 2.5rem);
+            color: white;
+            font-family: 'black ops one';
+            span{
+                color: orange;
+            }
+        }
+        .plan-boxmodel{
+            width: auto;
+            background-color: rgba(255, 255, 255, 0.05);
+            margin: 200px 30px;
+            border:1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            div{
+                display: flex;
+                margin: 15px;
+                img{
+                    width: 250px;
+                    border-radius: 40px;
+                }
+                div{
+                    @include flex-center-colum;
+                    align-items: center;
+                    h3{
+                        font-family: 'barlow';
+                        font-size: 2.5rem;
+                        color: #f4f3f3;
+                    }
+                    form select {
+                        margin-top: 20px;
+                        width:auto;
+                        padding: 5px 10px;
+                        font-size: 1.5rem;
+                        font-family: 'barlow';
+                        border:3px solid rgba(255, 255, 255, 0.05);
+                        background-color: rgba(255, 255, 255, 0.05);
+                        border-radius: 100px;
+                        text-align: center;
+                        color: #e3e2e1;
+                        option {
+                            color:#e3e2e1;
+                            background-color: #395b64;                }
+                    }
+                }
+            }
+        }
+}
+
+.asociate-title{
+    margin: 40px 30px;
+    .form{
+        display: flex;
+        margin: 0px 30px;
+        div{
+            border: 1px solid #c5c5c5;
+            input{
+                border-style: none;
+                outline: none;
+                background-color: #e3e2e1;
+                padding: 10px;
+                width: 211px;
+            }
+        }
+    } 
+}
+
+
+.salud{
+    margin: 30px 30px;
+    div{
+        display: flex;
+        margin-top: 20px;
+        border-bottom: 1px solid black;
+        width: fit-content;
+        p{
+            font-size: 1.05rem;
+            margin-right: 15px;
+            display: flex;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 80px;
+            height: 22px;
+            input {
+                display: none;
+                &:checked {
+                    + {
+                        .slider {
+                            background-color: $background-color_3;
+                            &:before {
+                                -webkit-transform: translateX(26px);
+                                -ms-transform: translateX(26px);
+                                transform: translateX(50px);
+                            }
+                            &:after {
+                                content: 'SI';
+                            }
+                        }
+                    }
+                }
+                &:focus {
+                    + {
+                        .slider {
+                            box-shadow: 0 0 1px #2196F3;
+                        }
+                    }
+                }
+            }
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $background-color_1;
+                -webkit-transition: .4s;
+                transition: .4s;
+                border-radius: 34px;
+                &:before {
+                    position: absolute;
+                    content: "";
+                    height: 15px;
+                    width: 15px;
+                    left: 4px;
+                    bottom: 4px;
+                    background-color: $background-color_2;
+                    -webkit-transition: .4s;
+                    transition: .4s;
+                    border-radius: 50%;
+                }
+                &:after {
+                    content: 'NO';
+                    color: $color_1;
+                    display: block;
+                    position: absolute;
+                    transform: translate(-50%,-50%);
+                    top: 50%;
+                    left: 50%;
+                    font-size: 10px;
+                    font-family: $font-family_1;
+                }
+            }
+        }
+    }
+}
+
+.conociste{
+    margin: 0px 30px;
+}
+
+.asociate-texto{
+    margin: 30px 30px;
+}
+
+.asociate-boton{
+@include flex-center;
+margin-bottom: 30px;
+    input{
+        @include btn;
+        font-size: $font-btn;
+        font-size: 1.5rem;
+        font-weight: 650;
+    }
+}
+
+

@@ -1,0 +1,213 @@
+
+// INICIO
+
+.inicio{
+    height: 100vh;
+    background:linear-gradient(rgba(0, 1, 3, 0.5), rgba(0,0,0,.7)),url(../img/FONDO\ 2.avif);
+    @include background;
+    color:#f4f3f3;
+    position:relative;
+    font-family:"barlow";
+    .inicio-grid{
+    display: grid;
+    grid-template-columns:repeat(2,58%);
+    text-align: center;
+}
+.texto__inicio{
+    height: 100vh;
+    @include flex-center-colum;
+    h2{
+        font-size: 4rem;
+        font-weight: 650;
+    }
+    h3{
+        margin-top:20px ;
+        font-size: 1.5rem;
+        font-weight: 800;
+    }
+    div{
+        @include flex-center;
+        nav {
+            margin-top: 30px;
+            @include btn;
+            a{
+                color: black;
+                font-size: 1.3rem;
+                font-weight: 650;
+            }
+        }
+        }
+    }
+}
+
+
+//PLANES
+
+.fondo__plan{
+    height: 100vh;
+    background-image: url(../img/cool-background\ \(1\).png);
+    @include background;
+    .plan-grid{
+        height: 100vh;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        
+        .titulo__plan{
+            float: left;
+            font-family: "barlow";
+            h2{
+
+                font-weight: 650;
+                font-size: 4rem;
+                span{
+                    color: orange;
+                }
+            }
+            p{
+                font-size: 1.5rem;
+                margin-top: 20px;
+            }
+        }
+        .planes{
+            border: solid 1px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,1);
+            width: 400px;
+            height: 600px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            div h2{
+                font-size: 40px;
+                font-weight: 650;
+            }
+            .planes__precio{
+                font-size: 30px;
+                height: 200px;
+                border: solid;
+                border-left: 0px;
+                border-right: 0px;
+                margin: 0px 20px ;
+                @include flex-center-colum;
+                justify-content: space-around;
+                nav a{
+                        @include btn;
+                        font-family: $font-btn;
+                        color: black;
+                        font-size: 1.5rem;
+                        font-weight: 650;
+                }
+                
+            }
+            .planes__texto{
+                margin-left:40px;
+                font-size: 20px;
+                list-style-image:url(../img/CHECK.svg);
+                text-align: left;
+            }
+            .planes__sedes{
+                text-align: center;
+                margin-top: 30px;
+                list-style-type: none;
+                a{
+                    color:rgb(70, 70, 70);
+                    font-family: $font-btn;
+                    text-decoration: none;
+                    font-size: 20px;
+                    &:hover{
+                        color: orange;
+                        transform: scale(1.5);
+                        transition: all  0.5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//ACTIVIDADES
+
+
+.fondo__activiades{
+    background-image: url(../img/fondo\ 3.jpg);
+    @include background;
+    height:60vh;
+    @include flex-center-colum;
+    .fondo_grid{
+        .actividades__texto{
+            @include flex-center-colum;
+            font-family: $font-btn;
+            margin-left: 30px;
+            h2{
+                font-size: 60px;
+                font-weight: 650;
+                span{
+                    color: orange;
+                }
+            }
+            p{
+                font-size: 20px;
+                margin: 10px 0px;
+            }
+            nav{
+                margin-top: 45px;
+                a{
+                    font-family: $font-btn;
+                    color: black;
+                    font-weight: 650;
+                    font-size: 1.5rem;
+                    @include btn
+                }
+            }
+        } 
+        .actividades__video{
+            width: 100%;
+            height: 100%;
+            margin: 0px 20px;
+        }
+    }
+}
+
+//PREGUNTAS FRECUENTES
+
+
+.fondo__preguntas{
+    background-color:#202128;
+    height: 40vh;
+    @include flex-center-colum;
+    .preguntas__texto{
+        font-family: $font-btn;
+        h2{
+            font-size: 45px;
+            color: white;
+            font-weight: 650;
+            margin-bottom: 30px;
+            span{
+                color: orange;
+            }
+        }
+        details{
+            display: flex;
+            background: #202128;
+            cursor: pointer;
+            h5{
+                color: whitesmoke;
+                text-align:initial
+            }
+            p{
+                color: whitesmoke;
+            }
+            summary{
+                list-style:none;
+                &::before{
+                    content:'+';
+                    color: #f4f3f3;
+                }
+            }
+        }
+        details[open] summary::before{
+                        content: '-';
+                    }
+    }
+}
