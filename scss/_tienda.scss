@@ -1,3 +1,4 @@
+
 .header__tienda {
 	display: flex;
 	flex-direction: column;
@@ -62,8 +63,38 @@
 	video {
 		position: absolute;
 		width: 100%;
-		height: 100%;
+		height: 80%;
 		object-fit: cover;
 		z-index: -2;
+		
+	}
+	
+	
+}
+.tienda-tittle{
+	margin-top: 350px;
+	height: auto;
+	@include flex-center;
+	h5{
+		color: rgb(72, 72, 72);
+		font-weight: 650;
+		$font-btn:'barlow';
+		font-size: clamp(2rem , 4vw, 6rem);
+		
 	}
 }
+.offers{
+	margin: 80px 10px;
+	border: 1px solid grey;
+	width: 400px;
+	a .text{
+		p{
+			color: black;
+			margin-left: 20px;
+			$font-btn:'barlow';
+			font-weight: 500px;
+		}
+	}
+
+}
+

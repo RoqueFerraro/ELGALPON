@@ -16,10 +16,11 @@
             border:1px solid rgba(255, 255, 255, 0.05);
             border-radius: 20px;
             div{
-                display: flex;
+                @include flex-center;
                 margin: 15px;
+                width: auto;
                 img{
-                    width: 250px;
+                    width: clamp(200px , 50%, 400px);
                     border-radius: 40px;
                 }
                 div{
